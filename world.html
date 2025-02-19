@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="index.html">
+    <title>Document</title>
+    <style>
+       .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+     
+       
+        .sidebar {
+            position: absolute;
+            top:0;
+            left: 0;
+            bottom:0;
+            width: 200px;
+            
+            color: white;
+            padding-top: 20px;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            z-index: 1;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                
+                <a href="index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                    <h3>DNBC</h3>
+                </div></a>
+
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." id="search-bar">
+                    <button type="submit">Search</button>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="..//index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="..//about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="..//contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                                Select location
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="newyork/page.html">New York</a></li>
+                        <li><a class="dropdown-item" href="london/london.html">London</a></li>
+                        <li><a class="dropdown-item" href="Los Angeles/city.html">Los Angeles</a></li>
+                        <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+                        <li><a class="dropdown-item" href="sydney/city.html">Sydney</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+    <br><br><br>
+
+    
+ 
+    <div class="container-fluid bg-dark text-white position-relative " style="height: 300px; padding: 0;">
+        <img src="images.html/old-terrestrial-globe-standing-on-a-school-desk-in-a-classroom-photo.jpg" alt=""
+            class="w-100 h-100" style="object-fit: cover; filter: brightness(80%);">
+        <div class="position-absolute top-50 start-50 translate-middle text-center ">
+            <h1 class="display-6"
+                style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                TODAY IN WORLD</h1>
+            <p>Stay updated with the latest political news, insights, and analyses from around the world.</p>
+        </div>
+    </div>
+    <br><br>
+
+    <h1 class="text-center text-decoration-underline">Latest News</h1> <br><br>
+
+        <div class="row">
+            <div class="col-6 border-bottom border-light-subtle mb-3">
+                <a href="latest1.html" class="text-decoration-none">
+                    <div class="card mb-3 border border-light w-100">
+                        <div class="row g-0 flex-column flex-lg-row"> 
+                            <div class=" position-relative">
+                                <img src="images.html/vance.webp" class="img-fluid w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            <div class=" d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Vance turns on European allies in blistering speech that downplayed threats from Russia and China</h4>
+                                    
+                                    <p class="card-text fs-5">US Vice President JD Vance vented at European leaders Friday, telling them that the biggest threat to their security was “from within,” rather than China and Russia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+            <div class="col-6 border-bottom border-light-subtle mb-3">
+                <a href="latest2.html" class="text-decoration-none">
+                    <div class="card mb-3 border border-light w-100">
+                        <div class="row g-0 flex-column flex-lg-row"> 
+                            <div class="position-relative">
+                                <img src="images.html/gettyimages-1047552982.webp" class="img-fluid w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">US Navy aircraft carrier collides with merchant ship near Suez Canal</h4>
+                                   
+                                    <p class="card-text fs-5">The nuclear-powered aircraft carrier USS Harry S. Truman was involved in a collision with a merchant ship near Egypt in the Mediterranean Sea on Wednesday night, a Navy spokesperson said Thursday.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div>
+                    <h3 class="text1">Israel's top Army general resigns over Netanyahu's failure to prevent Hamas attack
+                        that sparked Gaza war :
+                    </h3>
+                    <img src="images.html/ISRAEL-PALESTINIANS-CHIEF-OF-STAFF-0_1737467786080_1737467801399.avif"
+                        width="500px" height="300px" alt="">
+                    <p class="one">Chief of the General Staff of the Israel Defense Forces Herzi Halevi is the most
+                        prominent Israeli official to resign over the October 7 attack, coming two days after a
+                        ceasefire came into effect in Gaza.
+                    </p>
+                    <a href="continue.html" style="font-size:smaller;">Continue Reading</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6" style="padding-left: 120px; padding-top: 50px;">
+                <h3 style="width: 400px; font-size: medium;">Severe storm lashes parts of UK and Ireland, causing travel
+                    chaos :</h3>
+                <img src="images.html/shutterstock-editorial-15115854c.webp" class="img-fluid" width="350px"
+                    height="200px" style="padding-left: 40px;" alt="">
+                <p class="text-center" style="width: 400px; font-size:smaller; ">A rare “stay at home” warning has been
+                    issued for parts of the United Kingdom and Ireland as a severe storm lashes the region, bringing
+                    dangerous 100mph (160 kmh) winds and unleashing travel chaos.
+
+                    Storm Éowyn, an extratropical “bomb” cyclone that has formed in the North Atlantic and intensified
+                    rapidly, has hit rail services, delayed flights and forced road closures.
+
+                    The strongest winds and most significant impacts are expected in Northern Ireland and central and
+                    southwestern parts of Scotland, according to the UK's Met Office. A red weather warning was
+                    established Friday morning local time in Northern Ireland and parts of Scotland.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+       
+       
+      
+        <!-- Trending News -->
+   <h1 class="text-center mb-5 text-decoration-underline">Trending News</h1>
+   <div class="container mt-4">
+     <div class="row g-4">
+       <div class="col-md-4 mb-4 d-flex">
+         <div class="card shadow-sm w-100">
+           <img src="images.html/ap25020432808493.jpg" class="card-img-top img-fluid" alt="News 1">
+           <div class="card-body d-flex flex-column">
+             <h5 class="card-title">More hostages and prisoners set to be
+                released during Israel-Hamas ceasefire</h5>
+             <p class="card-text flex-grow-1">Hamas says it expects Israel to
+                release around 200 Palestinian prisoners on Saturday as part of the ceasefire and
+                hostage deal.</p>
+             <a href="news1.html" class="btn btn-primary mt-auto">View Details</a>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-md-4 mb-4 d-flex">
+         <div class="card shadow-sm w-100">
+           <img src="images.html/318bb670-daaa-11ef-902e-cf9b84dc1357.jpg.webp" class="card-img-top img-fluid" alt="News 2">
+           <div class="card-body d-flex flex-column">
+             <h5 class="card-title">US issues pause on foreign aid, leaked
+                memo says</h5>
+             <p class="card-text flex-grow-1">Secretary of State Marco Rubio has
+                previously said the US should only spend abroad if it makes America "stronger",
+                "safer" or "more prosperous"</p>
+             <a href="news2.html" class="btn btn-primary mt-auto">View Details</a>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-md-4 mb-4 d-flex">
+         <div class="card shadow-sm w-100">
+           <img src="images.html/dc451080-da4f-11ef-902e-cf9b84dc1357.png.webp" class="card-img-top img-fluid" alt="News 3">
+           <div class="card-body d-flex flex-column">
+             <h5 class="card-title">Ukraine claims drone strike on Russian
+                oil refinery</h5>
+             <p class="card-text flex-grow-1">Ukraine reportedly hit a Russian oil
+                refinery and targeted Moscow during an attack involving a wave of at least 121
+                drones, one of the largest single operations.</p>
+              <a href="news3.html" class="btn btn-primary mt-auto">View Details</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+        <footer class="bg-dark text-white pt-4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 mb-3">
+                        <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                        <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global
+                            updates - Stay ahead with DNBC. </p>
+                    </div>
+
+
+                    <div class="col-md-3 mb-3">
+                        <h5 class="text-uppercase">News Pages</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="world.html" class="text-white ">Today in World</a></li>
+                            <li><a href="business/business.html" class="text-white ">Business</a></li>
+                            <li><a href="sports/index.html" class="text-white ">Sports</a></li>
+                            <li><a href="politics/Politics.html" class="text-white ">Politics</a></li>
+                            <li><a href="technology/technology.html" class="text-white ">Technology</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-3 mb-3">
+                        <h5 class="text-uppercase">About US</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white ">Home</a></li>
+                            <li><a href="about.html" class="text-white ">About</a></li>
+                            <li><a href="contact.html" class="text-white ">Contact</a></li>
+                            <li><a href="#" class="text-white ">Sign up</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-3 mb-3">
+                        <h5 class="text-uppercase">Contact & FAQs</h5>
+                       <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white ">General Inquiries</a></li>
+                        <li><a href="contact.html" class="text-white ">Email</a></li>
+                        <li><a href="contact.html" class="text-white ">Contact</a></li>
+                       </ul>
+                </div>
+
+
+                <div
+                    class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+                    <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                    <div class="icons">
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+</body>
+
+</html>

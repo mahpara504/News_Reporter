@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .hero-section {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }   
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-secondary-subtle">
+
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+           
+
+            <a href="index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                <h3>DNBC</h3>
+            </div></a>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button type="submit">Search</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                            Select Location of Your City
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="newyork/page.html">New York</a></li>
+                            <li><a class="dropdown-item" href="london.html">London</a></li>
+                            <li><a class="dropdown-item" href="Los Angeles/city.html">Los Angeles</a></li>
+                            <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+                            <li><a class="dropdown-item" href="sydney.html">Sydney</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="hero-section text-center">
+        <div class="container text-black text-decoration-underline">
+            <h1>About Us</h1>
+            <h6>Delivering truth and clarity in every story</h6>
+        </div>
+    </section>
+
+    
+    <section class="container">
+        <h2 class="section-title">Our Mission & Vision</h2>
+        <div class="row">
+            
+            <div class="col-lg-6 mb-4">
+                <div class="card shadow-sm border-0 text-center" style="background-color: #d3d3d3;">
+                    <div class="card-body">
+                        <h4 class="card-title">Mission</h4>
+                        <p class="card-text">Our mission is to provide the latest and most reliable news to keep our readers informed and connected. We strive to bring transparency, fairness, and integrity to every report we publish.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-lg-6 mb-4">
+                <div class="card shadow-sm border-0 text-center" style="background-color: #d3d3d3;">
+                    <div class="card-body">
+                        <h4 class="card-title">Vision</h4>
+                        <p class="card-text">We aim to be a leading news platform that empowers people worldwide to make informed decisions and engage with their communities meaningfully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    
+    <section class="container my-5">
+        <h2 class="section-title text-center mb-4">Our Core Values</h2>
+        <div class="row">
+            
+            <div class="col-md-4 mb-4 text-center">
+                <div class="card shadow-sm border-0" style="background-color: #d3d3d3;">
+                    <div class="card-body">
+                        <h5 class="card-title">Integrity</h5>
+                        <p class="card-text">We uphold the truth and report with honesty and fairness, no matter the story.</p>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <div class="col-md-4 mb-4 text-center">
+                <div class="card shadow-sm border-0" style="background-color: #d3d3d3;">
+                    <div class="card-body">
+                        <h5 class="card-title">Transparency</h5>
+                        <p class="card-text">We believe in providing clear and open communication with our readers, ensuring no hidden agendas.</p>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <div class="col-md-4 mb-4 text-center">
+                <div class="card shadow-sm border-0" style="background-color: #d3d3d3;">
+                    <div class="card-body">
+                        <h5 class="card-title">Diversity</h5>
+                        <p class="card-text">Our stories reflect the diversity of the world, ensuring that every voice is heard and respected.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="section-title text-center mb-4">Our Story</h2>
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm border-0 text-center" style="background-color: #d3d3d3;">
+                    <div class="card-body">
+                        <h5 class="card-title">How We Began</h5>
+                        <p class="card-text">Founded in 2020, we set out with the goal of providing a more transparent and unbiased approach to reporting. Our team of passionate journalists works tirelessly to bring you the most up-to-date, fact-checked news from around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+                </div>
+                
+              
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="world.html" class="text-white ">Today in World</a></li>
+                        <li><a href="business/business.html" class="text-white ">Business</a></li>
+                        <li><a href="sports/index.html" class="text-white ">Sports</a></li>
+                        <li><a href="politics/Politics.html" class="text-white ">Politics</a></li>
+                        <li><a href="technology/technology.html" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+                
+          
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white ">Home</a></li>
+                        <li><a href="about.html" class="text-white ">About</a></li>
+                        <li><a href="contact.html" class="text-white ">Contact</a></li>
+                        <li><a href="services.html" class="text-white ">Services</a></li>
+                        <li><a href="#signUpModalLabel" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+    
+             
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white ">General Inquiries</a></li>
+                        <li><a href="contact.html" class="text-white ">Email</a></li>
+                        <li><a href="contact.html" class="text-white ">Contact</a></li>
+                     
+                    </ul>
+                </div>
+            </div>
+    
+    
+            <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+           
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+             
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

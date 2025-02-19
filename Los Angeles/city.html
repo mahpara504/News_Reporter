@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .hover-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .hover-overlay:hover {
+            opacity: 1 !important;
+        }
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        #map {
+            display: none;
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+
+</head>
+<body onload="showLocation()">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            
+
+            <a href="..//index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                <h3>DNBC</h3>
+            </div></a>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button type="submit">Search</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="..//index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                            Select Location of Your City
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="..//newyork/page.html">New York</a></li>
+                        <li><a class="dropdown-item" href="..//london/london.html">London</a></li>
+                        <li><a class="dropdown-item" href="..//Los Angeles/city.html">Los Angeles</a></li>
+                        <li><a class="dropdown-item" href="..//paris.html">Paris</a></li>
+                        <li><a class="dropdown-item" href="..//sydney/city.html">Sydney</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br><br>
+
+    <div class="container-fluid my-4">
+        <div class="container-fluid bg-dark text-white position-relative" style="height: 300px; padding: 0;">
+            <img src="20190616154621!Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg" alt="New York" class="w-100 h-100" style="object-fit: cover; filter: brightness(80%);">
+            <div class="position-absolute top-50 start-50 translate-middle text-center ">
+                <h1 class="display-6" style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">LOS ANGELES</h1>
+                <p>Stay updated with the latest news, insights, and analyses from around the world.</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <!-- end -->
+
+    <div class="container mt-4 my-2">
+        <div class="row g-4 p-2">
+
+            <h1 class="border-bottom border-black">Latest News</h1>
+            
+            
+            <div class="col-lg-8 col-md-12 border-bottom border-black">
+                <a href="card1.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="position-relative">
+                                <img src="los-angeles-fire-gty-lv-250107-2_1736301851297_hpMain_16x9.avif" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex flex-column justify-content-center bg-secondary-subtle ">
+                                <div class="card-body">
+                                    <h5 class="card-title">Los Angeles fires spread, dimming hopes and forcing evacuations as death toll rise</h5>
+                                    <p class="card-text">2 January 2025</p>
+                                    <p class="card-text">The largest of the Los Angeles fires has spread toward previously untouched neighbourhoods, forcing new evacuations and dimming hopes that the disaster was coming under control.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            
+            <div class="col-lg-4 col-md-12 g-2">
+                
+                <div class="row row-cols-1 row-cols-md-2 g-2">
+                    <a href="card2.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black g-2">
+                        <div class="card bg-secondary-subtle  border-0">
+                            <img src="36548300-eb1a-11ef-bd1b-d536627785f2.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Judge shouts 'stop it!' as A$AP Rocky lawyers row</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="card3.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black g-2">
+                        <div class="card bg-secondary-subtle border-0">
+                            <img src="13db8c30-eaaa-11ef-bd1b-d536627785f2.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">LA vehicle swept into ocean as rain hits fire-ravaged area</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="card4.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black">
+                        <div class="card bg-secondary-subtle border-0">
+                            <img src="0e0ff810-eac1-11ef-bd1b-d536627785f2.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Too quiet on set? Hollywood pushes for more LA productions post wildfires</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="card5.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black">
+                        <div class="card bg-secondary-subtle  border-0">
+                            <img src="8472f340-e823-11ef-a819-277e390a7a08.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Here's what to know about A$AP Rocky's trial
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending News -->
+
+        <div class="row g-4 mt-4">
+
+            <h1 class="border-bottom border-black">Trending News In Los Angeles</h1>
+            
+            <div class="col-12 col-xl-6 ">
+                <a href="news1.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="7ebe680122a9ef49c58f1e13cea35a6d.jpg" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fight turns into deadly shooting in North Hollywood</h5>
+                                    <p class="card-text text-body-secondary">2 January 2025</p>
+                                    <p class="card-text">Police were dispatched to the 11100 block of Magnolia Boulevard at around 1:45 a.m. after receiving reports of a shooting in the area, according to the Los Angeles Police Department. </p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news2.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mud and debris flow onto Duke's Malibu restaurant, cleanup underway</h5>
+                                    <p class="card-text text-body-secondary">2 January 2025</p>
+                                    <p class="card-text">"Within literally a matter of minutes the restaurant was, both ends, entire parking lot, full of mud and debris,"  Josh Morgan, TS restaurants VP of operations said.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 position-relative">
+                                <img src="dukes-malibu-2.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news3.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="gettyimages-2193780942.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Councilwoman Park calls for review of every hydrant in Los Angeles</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Park's motion directs the Los Angeles Department of Water and Power and Fire Department to deliver a report to the City Council about the status of every hydrant in the city.</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news4.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">California Insurance Commissioner asks State Farm to justify 22% insurance rate increase</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Our decisions must be guided by transparent data and an honest reckoning with the challenges we all face together," Commissioner Ricardo Lara wrote in a letter to State Farm. </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="download.jpg" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-12 col-xl-6">
+                <a href="news5.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="crime.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hit-and-run driver turns self in after Tarzana crash that left pedestrian with critical injuriews</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Police say that the hit-and-run driver that struck a pedestrian in Tarzana earlier this week and left him with severe injuries turned themself in. </p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news6.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oxnard mobile home park suffers wind damage after weak tornado</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Meteorologists with the National Weather Service said a weak tornado pushed through Oxnard Thursday afternoon, as a mobile home park sustained wind damage.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="screenshot-2025-02-14-100106.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                        
+                            
+                        </div>
+                    </div>
+                </a>
+                <button onclick="showMap()" class="btn btn-secondary mt-3">Get Location</button> 
+            </div>
+    
+            
+            
+        </div>
+    </div>
+    <br>
+    <!-- Geolocation Part -->
+   <div id="map">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.883152931!2d-118.74139131920599!3d34.02003916670796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1739862770701!5m2!1sen!2s" class="w-100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+
+   <script>
+       function showMap() {
+           var mapDiv = document.getElementById('map');
+           mapDiv.style.display = 'block'; 
+       }
+   </script>
+   <br><br><br>
+
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+                </div>
+                
+              
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Today in World</a></li>
+                        <li><a href="#" class="text-white ">Business</a></li>
+                        <li><a href="#" class="text-white ">Entertainment</a></li>
+                        <li><a href="#" class="text-white ">Sports</a></li>
+                        <li><a href="#" class="text-white ">Politics</a></li>
+                        <li><a href="#" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+                
+          
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Home</a></li>
+                        <li><a href="#" class="text-white ">About</a></li>
+                        <li><a href="#" class="text-white ">Contact</a></li>
+                        <li><a href="#" class="text-white ">Services</a></li>
+                        <li><a href="#" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+    
+             
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                </div>
+            </div>
+    
+    
+            <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+           
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+             
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

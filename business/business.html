@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Page</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+    .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            
+            background-color: white;
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+
+         .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* .img{
+          height: 300px;
+          width: 415px;
+        } */
+        img{
+            height: 100%;
+            width:100%;
+        }
+
+</style>
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+          
+
+            <div class="text-center" id="dnbc">
+                <h3>DNBC</h3>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button type="submit">Search</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="..//index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                            Select Location
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="newyork/page.html">New York</a></li>
+                            <li><a class="dropdown-item" href="london/london.html">London</a></li>
+                            <li><a class="dropdown-item" href="Los Angeles/city.html">Los Angeles</a></li>
+                            <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+                            <li><a class="dropdown-item" href="sydney/city.html">Sydney</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br><br><br>
+    <div class="container-fluid bg-dark text-white position-relative " style="height: 300px; padding: 0;">
+        <img src="shutterstock_1175858854.jpg.optimal.jpg" alt="" class="w-100 h-100" style="object-fit: cover;">
+        <div class="position-absolute top-50 start-50 translate-middle text-center ">
+            <h1 class="display-6" style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">BUSINESS</h1>
+            <p>Stay updated with the latest business insights and news.</p>
+        </div>
+    </div>
+    
+    <div class="conatiner">
+        <div class="mt-5 d-md-flex align-items-center justify-content-center position-relative">
+            <a href="card2.html"><img src="240729-trump-bitcoin-al-1224-a422dd.webp" alt=""></a>
+            <p class="fw-bold fs-1 text-center text-decoration-underline">DONALD TRUMP BACKS 'STRATEGIC BITCOIN STOCKPILE' IN SPEECH TO CRYPTO FAITHFUL</p>
+        </div>
+    </div>
+    
+    <div class="container  ">
+        <div class="row">
+            <div class="col-md-6">
+            <a href="card1.html"><img src="best-marketing-strategies-used-by-companies.webp" class="mt-3 ms-3 img-fluid" alt=""></a>
+     <div>
+           <h5 class="mt-3 fw-bold fs-3 ms-3 text-decoration-underline">Latest Business Trends and Market Insights</h5>
+           <p class="fs-6 col-md-8 ms-3">Stay informed with up-to-date news on global markets, corporate strategies, and emerging business trends. Get expert analysis, reports, and videos to stay ahead in the business world."</p>
+         </div>
+    </div>
+    
+
+    <div class=" col-md-6">   
+        <a href="card6.html"><img src="e89c6600-e60a-11ef-af01-096ba6900a39.jpg.webp" class="mt-3 ms-3 w-100 img-fluid alt=""></a>
+        
+           <h5 class="mt-3 fw-bold fs-3 ms-3 text-decoration-underline text-center ">Judge blocks Musk team access to Treasury Department Records</h5>
+       </div>
+       </div>
+    </div>
+</div>
+   <div class=" d-flex justify-content-center align-items-center position-relative mx-auto"> 
+  
+    <div class="col-md-4 ms-5 ">
+    <a href="card5.html"><img src="GettyImages-2176896454-e1728481404245.webp" alt="" class="w-75 img-fluid"></a>
+    <p class="col-md-9">Germany's economic recovery faces challenges, with rising energy costs and inflation threatening to slow growth.</p>
+   </div>
+
+   <div class="col-md-4">
+    <a href="card3.html"><img src="PEP20241011100501009.jpeg" alt="" class="w-75 img-fluid"></a>
+    <p class="col-md-9">Japanese businesses are more confident as exports to key markets like the U.S. and China have seen an uptick.</p>
+   </div>
+
+   <div class="col-md-4">
+    <a href="card4.html"><img src="russia.umg.jpg" alt="" class="img-fluid" style="width: 380px; height: 250px;"></a>
+    <p class="col-md-9">Russia is coping with international sanctions by ramping up energy exports to China and other Asian markets.</p>
+   </div>
+  </div>
+   
+   <!-- Trending News -->
+   <h1 class="text-center mb-5 text-decoration-underline">TRENDING NEWS</h1>
+   <div class="container mt-4">
+     <div class="row g-4">
+       <div class="col-md-4 mb-4 d-flex">
+         <div class="card shadow-sm w-100">
+            
+           <img src="images (1).jpg" class="card-img-top img-fluid w-100 img" alt="News 1">
+           <div class="card-body d-flex flex-column">
+             <h5 class="card-title">Bank of America Q4 Beats Expectations</h5>
+             <p class="card-text flex-grow-1">Bank of America posted strong fourth-quarter earnings, driven by robust consumer spending and rising interest rates, which boosted its lending margins. The results exceeded analysts’ forecasts, helping the stock price rise.</p>
+             <a href="news1.html" class="btn btn-primary mt-auto">Go somewhere</a>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-md-4 mb-4 d-flex">
+         <div class="card shadow-sm w-100">
+            
+           <img src="how-inflation-affects-your-cost-living.asp_V2-b11e1ddb3ca24bb18e2a66c23b9ee0a6.png" class="card-img-top img-fluid w-100 img" alt="News 2">
+           <div class="card-body d-flex flex-column">
+             <h5 class="card-title">U.S. Inflation Slows</h5>
+             <p class="card-text flex-grow-1">Inflation in the U.S. has shown signs of easing, but prices for key items like food, housing, and health remain high. Despite the slowdown, inflation is still concern, leading to continued rate hikes by the Federal Reserve.</p>
+             <a href="news2.html" class="btn btn-primary mt-auto">Go somewhere</a>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-md-4 mb-4 d-flex">
+         <div class="card shadow-sm w-100">
+            
+           <img src="retailers-supply-chain-costs-increase.webp" class="card-img-top img-fluid w-100 img" alt="News 3">
+           <div class="card-body d-flex flex-column">
+             <h5 class="card-title">Retailers Prepare for Supply Chain</h5>
+             <p class="card-text flex-grow-1">Major U.S. retailers like Walmart and Target are preparing for ongoing supply chain disruptions due to inflation and labor shortages. These challenges may lead to higher prices for consumers in the coming months.</p>
+             <a href="news3.html" class="btn btn-primary mt-auto">Go somewhere</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   
+   <!-- Footer Section -->
+   <footer class="bg-dark text-white pt-4">
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-md-3 mb-3">
+                <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+            </div>
+            
+          
+            <div class="col-md-3 mb-3">
+                <h5 class="text-uppercase">News Pages</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white ">Today in World</a></li>
+                    <li><a href="#" class="text-white ">Business</a></li>
+                    <li><a href="#" class="text-white ">Entertainment</a></li>
+                    <li><a href="#" class="text-white ">Sports</a></li>
+                    <li><a href="#" class="text-white ">Politics</a></li>
+                    <li><a href="#" class="text-white ">Technology</a></li>
+                </ul>
+            </div>
+            
+      
+            <div class="col-md-3 mb-3">
+                <h5 class="text-uppercase">About Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white ">Home</a></li>
+                    <li><a href="#" class="text-white ">About</a></li>
+                    <li><a href="#" class="text-white ">Contact</a></li>
+                    <li><a href="#" class="text-white ">Services</a></li>
+                    <li><a href="#" class="text-white ">Sign up</a></li>
+                </ul>
+            </div>
+
+         
+            <div class="col-md-3 mb-3">
+                <h5 class="text-uppercase">Contact & FAQs</h5>
+                <p class="small"></p>
+                <p class="small"></p>
+                <p class="small"></p>
+                <p class="small"></p>
+            </div>
+        </div>
+
+
+        <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+       
+            <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+            <div class="icons">
+                <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+         
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

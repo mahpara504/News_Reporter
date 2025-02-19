@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            background-color: #f8f9fa;
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            
+
+            <a href="..//index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                <h3>DNBC</h3>
+            </div></a>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button type="submit">Search</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="..//index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                            Select Location of Your City
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="..//newyork/page.html">New York</a></li>
+                            <li><a class="dropdown-item" href="..//london/london.html">London</a></li>
+                            <li><a class="dropdown-item" href="..//Los Angeles/city.html">Los Angeles</a></li>
+                            <li><a class="dropdown-item" href="..//paris.html">Paris</a></li>
+                            <li><a class="dropdown-item" href="..//sydney/city.html">Sydney</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br><br><br>
+
+    <div class="container-fluid bg-dark text-white position-relative" style="height: 300px; padding: 0;">
+        <img src="pic/background.jpg" alt="" class="w-100 h-100" style="object-fit: cover; filter: brightness(80%);">
+        <div class="position-absolute top-50 start-50 translate-middle text-center ">
+            <h1 class="display-6"
+                style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                Sports</h1>
+            <p>Stay updated with the latest sports news, insights, and analyses from around the world.</p>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <h2 class="text-xl font-bold mb-4">
+                Latest News
+            </h2>
+            <!-- card 1 -->
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <a href="card1.html"><img src="pic/pakistan.jpg" class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">New Zealand win toss and bat against Pakistan in tri-series opener at
+                            Lahore’s Gaddafi Stadium</h5>
+                        <p class="card-text">
+                            New Zealand fast bowler Lockie Ferguson ruled out of match with a hamstring injury.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- card 2 -->
+
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <a href="card2.html"><img
+                            src="https://staticg.sportskeeda.com/editor/2024/07/c97d8-17205021451077-1920.jpg"
+                            class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Abhishek ton helps India demolish England in final Twenty20</h5>
+                        <p class="card-text">India bowls out tourists for 97 for their second biggest T20 victory by
+                            runs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <a href="card3.html"><img
+                            src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F7d4a0d0f-36c6-440a-b0ca-56fba025d8f8.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1"
+                            class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Football tourney concludes in GB on a high note</h5>
+                        <p class="card-text">Thousands of spectators witness closing ceremony and final match of the
+                            week-long
+                            football championship.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <a href="card4.html"><img src="pic/basket ball.webp" class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Mavericks defeated in first game without Doncic</h5>
+                        <p class="card-text">The Dallas Mavericks were beaten 144-101 by the Cleveland Cavaliers just
+                            hours after
+                            Luka Doncic's shock trade to the Los Angeles Lakers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-xl font-bold mb-4">
+                More News
+            </h2>
+
+
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <a href="card5.html"><img
+                            src="https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/242600/242655.3.jpg"
+                            class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Lucknow owners agree deal for Manchester Originals</h5>
+                        <p class="card-text">Manchester Originals have become the second Hundred franchise to partner
+                            with an Indian
+                            Premier League team after Lancashire agreed a deal with Lucknow Super Giants.</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <a href="card6.html"><img
+                            src="https://media.gettyimages.com/id/1801918744/photo/dublin-ireland-john-cooney-celebrates-winning-the-celtic-super-featherweight-title-bout.jpg?s=612x612&w=gi&k=20&c=Erk91BphDPjdVglDG1ej9iLz9QKkAfpxez2X0N9VPsg="
+                            class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Boxer Cooney in intensive care after title defeat</h5>
+                        <p class="card-text">Super-featherweight boxer John Cooney is in intensive care after his defeat
+                            by Welshman
+                            Nathan Howells in Belfast on Saturday.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <a href="card7.html"><img
+                            src="https://media.mehrnews.com/d/2023/01/15/3/4394595.jpg?ts=1673775138523"
+                            class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Women players beat the odds to cut a path for ice hockey in Iran</h5>
+                        <p class="card-text">“We are the only country with more female players than male ice hockey
+                            players,” says Sedghi, the president of Iran’s ice hockey association.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-6">
+                <div class="card">
+                    <a href="card8.html"><img src="pic/ball.jpg" class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">One in a billion" Tendulkar bids goodbye</h5>
+                        <p class="card-text">The most influential contemporary cricketer, and the highest run-maker in
+                            history, will be remembered as an icon.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates -
+                        Stay ahead with DNBC. </p>
+                </div>
+
+
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Today in World</a></li>
+                        <li><a href="#" class="text-white ">Business</a></li>
+                        <li><a href="#" class="text-white ">Entertainment</a></li>
+                        <li><a href="#" class="text-white ">Sports</a></li>
+                        <li><a href="#" class="text-white ">Politics</a></li>
+                        <li><a href="#" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Home</a></li>
+                        <li><a href="#" class="text-white ">About</a></li>
+                        <li><a href="#" class="text-white ">Contact</a></li>
+                        <li><a href="#" class="text-white ">Services</a></li>
+                        <li><a href="#" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                </div>
+            </div>
+
+
+            <div
+                class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

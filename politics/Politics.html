@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .hover-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .hover-overlay:hover {
+            opacity: 1 !important;
+        }
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+            
+    </style>
+
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            
+
+            <a href="..//index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                <h3>DNBC</h3>
+            </div></a>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button type="submit">Search</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="..//index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                            Select Location of Your City
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="..//newyork/page.html">New York</a></li>
+                            <li><a class="dropdown-item" href="..//london/london.html">London</a></li>
+                            <li><a class="dropdown-item" href="..//Los Angeles/city.html">Los Angeles</a></li>
+                            <li><a class="dropdown-item" href="..//paris.html">Paris</a></li>
+                            <li><a class="dropdown-item" href="..//sydney/city.html">Sydney</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br><br><br>
+
+    <div class="container-fluid">
+        <div class="container-fluid bg-dark text-white position-relative" style="height: 300px; padding: 0;">
+            <img src="https://keystoneacademic-res.cloudinary.com/image/upload/element/73/73820_shutterstock_512847007.jpg" alt="Politics" class="w-100 h-100" style="object-fit: cover; filter: brightness(80%);">
+            <div class="position-absolute top-50 start-50 translate-middle text-center ">
+                <h1 class="display-6" style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">POLITICS</h1>
+                <p>Stay updated with the latest political news, insights, and analyses from around the world.</p>
+            </div>
+        </div>
+    
+        <div class="container py-4">
+            <div class="row g-4">
+
+                <h1 class="border-bottom border-dark">News</h1>
+                
+                <div class="col-12 col-xl-6">
+                    <a href="news1.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+    
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/2f20/live/05e15240-d8f3-11ef-902e-cf9b84dc1357.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dáil disruption 'was stunt politics on speed', says Irish PM</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">The election of the taoiseach (Irish prime minister) has been delayed after parliament was suspended amid chaotic scenes in the chamber.</p>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <a href="news2.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">How could Derbyshire's political map change?</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">Changes to the way councils operate could mean Derbyshire starts to look very different as a county.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/2eee/live/6d138170-d9a9-11ef-98f3-8f799a2ac21a.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <a href="news3.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+    
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/fbff/live/befc6400-ccea-11ef-94cb-5f844ceb9e30.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">What does 2025 hold for North East politics?</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">As the dust settles on a game-changing 2024, what do our region's politicians face this year?</p>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <a href="news4.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+    
+                                
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Could Wales ban political lying without the police?</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">It is unlikely a ban on lying will be a criminal offence, political editor Gareth Lewis learns.</p>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/d1bc/live/7d321da0-dc9c-11ef-902e-cf9b84dc1357.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+    
+            </div>
+        </div>
+      
+
+        <h1 class="border-bottom border-dark">Trending News</h1>
+
+        <div class="row">
+            <div class="col-6 border-bottom border-light-subtle mb-3">
+                <a href="news5.html" class="text-decoration-none">
+                    <div class="card mb-3 border border-light w-100">
+                        <div class="row g-0 flex-column flex-lg-row"> 
+                            <div class=" position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/140DC/production/_133704128_83vqggej.png.webp" class="img-fluid w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            <div class=" d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">US Politics Unspun: Sign up for our newsletter</h4>
+                                    <p class="card-text text-body-secondary fs-5">24 January 2025</p>
+                                    <p class="card-text fs-5">
+                                        Cut through the spin with North America correspondent Anthony Zurcher's take - in your inbox every Wednesday.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+            <div class="col-6 border-bottom border-light-subtle mb-3">
+                <a href="news6.html" class="text-decoration-none">
+                    <div class="card mb-3 border border-light w-100">
+                        <div class="row g-0 flex-column flex-lg-row"> 
+                            <div class="position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/fd50/live/3cf21510-d7e7-11ef-b4b9-cb08e2f4af3d.jpg.webp" class="img-fluid w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h4 class="card-title">Survivors say child abuse inquiry must set politics aside</h4>
+                                    <p class="card-text text-body-secondary fs-5">24 January 2025</p>
+                                    <p class="card-text fs-5">Ahead of council inquiry, victims urge "far-right" to stop exploiting their trauma "for own agenda".</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        
+
+
+
+        <div class="row gy-3">
+
+            <h1 class="border-bottom border-dark">More News About Politics</h1>
+          
+            <div class="col-lg-6 col-md-12">
+                <a href="news7.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border border-light-subtle mb-3">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">He’s emboldened, he’s organized and he’s still Trump: Takeaways from the president’s opening days</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Donald Trump’s first week in office isn’t over yet, but what the Republican president has done so far offers clues about how his next four years in the White House may unfold.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://dims.apnews.com/dims4/default/feeaa30/2147483647/strip/true/crop/4542x3024+69+0/resize/350x233!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fbd%2F0e%2F4e865d435d4f60d61408ee0a26e2%2F3b43c63b0bf743749a64e04679c3c24f" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+          
+            <div class="col-md-12 col-lg-6">
+                <a href="news8.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border border-light-subtle mb-3">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Had Trump been president, ‘maybe’ there would not have been war in Ukraine, Putin says – as it happened</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Russian president says if Donald Trump had been in power in 2022 the ‘crisis’ in Ukraine might not have happened. This live blog is closed</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://i.guim.co.uk/img/media/f329fb79930429a02736d5a4089758c94a4c053b/0_172_5710_3426/master/5710.jpg?width=620&dpr=2&s=none&crop=none" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <a href="news9.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border border-light-subtle mb-3">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Trump urged not to put massive tariffs on UK</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Business Secretary Jonathan Reynolds says there is no need for tariffs because the US has no goods trade deficit with the UK.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/abcb/live/cccd5680-da2c-11ef-95b0-9ba717ab19ce.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="news10.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border border-light-subtle mb-3">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">MP calls for harsher sentence for Southport killer</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Axel Rudakubana, 18, was jailed for a minimum of 52 years for the murders of three girls.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/ad41/live/d6508b50-d9dc-11ef-bc6d-11d87693addc.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="news11.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border border-light-subtle mb-3">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">MP abuse worse than Jo Cox era, says sister Leadbeater</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Leadbeater says her bill to legalise assisted dying has exposed her to unprecedented levels of "nastiness".</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4dbc/live/03b72360-d9b0-11ef-a6db-29ca006e3088.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

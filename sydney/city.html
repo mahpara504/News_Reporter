@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .hover-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .hover-overlay:hover {
+            opacity: 1 !important;
+        }
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        #map {
+            display: none;
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+
+</head>
+<body onload="showLocation()">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+
+            <a href="index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                <h3>DNBC</h3>
+            </div></a>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button type="submit">Search</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="..//index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//feedback.html">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                            Select Location
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="..//newyork/page.html">New York</a></li>
+                        <li><a class="dropdown-item" href="..//london/london.html">London</a></li>
+                        <li><a class="dropdown-item" href="..//Los Angeles/">Los Angeles</a></li>
+                        <li><a class="dropdown-item" href="..//paris.html">Paris</a></li>
+                        <li><a class="dropdown-item" href="..//sydney/city.html">Sydney</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br><br><br>
+    <div class="container-fluid my-4">
+        <div class="container-fluid bg-dark text-white position-relative" style="height: 300px; padding: 0;">
+            <img src="images (2).jpg" alt="New York" class="w-100 h-100" style="object-fit: cover; filter: brightness(80%);">
+            <div class="position-absolute top-50 start-50 translate-middle text-center ">
+                <h1 class="display-6" style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SYDNEY</h1>
+                <p>Stay updated with the latest technology news, insights, and analyses from around the world.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Geolocation Part -->
+
+
+
+    <!-- end -->
+
+    <div class="container mt-4  my-2">
+        <div class="row g-4 p-2">
+
+            <h1 class="border-bottom border-black">Latest News</h1>
+            
+            
+            <div class="col-lg-8 col-md-12 border-bottom border-black">
+                <a href="card1.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="position-relative">
+                                <img src="2ae4f3e0-da19-11ef-902e-cf9b84dc1357.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex flex-column justify-content-center bg-secondary-subtle ">
+                                <div class="card-body">
+                                    <h5 class="card-title">'Hot garbage': Australians react to smell of 'corpse flower' in bloom</h5>
+                                    <p class="card-text">2 January 2025</p>
+                                    <p class="card-text">Dubbed Putricia, the titan arum plant emits a putrid smell likened to "something rotting" or "hot garbage" for 24 hours after blooming.
+
+                                        The smell is the result of a chemical production that happens in the plant to attract pollinators.
+                                        
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            
+            <div class="col-lg-4 col-md-12 g-2">
+                
+                <div class="row row-cols-1 row-cols-md-2 g-2">
+                    <a href="card2.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black g-2">
+                        <div class="card bg-secondary-subtle  border-0">
+                            <img src="fe4e0350-da02-11ef-902e-cf9b84dc1357.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Captain Cook statue vandalised ahead of Australia Day</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="card3.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black g-2">
+                        <div class="card bg-secondary-subtle border-0">
+                            <img src="80aed990-d7c0-11ef-94fe-11958094d89a.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Mystery balls on Sydney beaches found to contain faecal bacteria</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="card4.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black">
+                        <div class="card bg-secondary-subtle border-0">
+                            <img src="f167b190-b49b-11ef-87fd-c3ecd9478ce5.png.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Fan flew 10,000 miles for derby called off by storm</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="card5.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black">
+                        <div class="card bg-secondary-subtle  border-0">
+                            <img src="0188d4e0-a66f-11ef-ab08-d557dc688749.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">From a Yorkshire farm to Bake Off fame Down Under</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending News -->
+
+        <div class="row g-4 mt-4">
+
+            <h1 class="border-bottom border-black">Trending News In Los Angeles</h1>
+            
+            <div class="col-12 col-xl-6 ">
+                <a href="news1.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="239a7d90-8ea5-11ef-a8a7-4f45df3c4fa3.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">King Charles begins Australia tour with church service</h5>
+                                    <p class="card-text text-body-secondary">2 January 2025</p>
+                                    <p class="card-text">King Charles and Queen Camilla joined a church congregation in Sydney for a Sunday service on the first day of engagements during their tour of Australia.</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news2.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sydney reopens beaches after tar ball mystery</h5>
+                                    <p class="card-text text-body-secondary">2 January 2025</p>
+                                    <p class="card-text">Beaches in the Australian city of Sydney have reopened for swimmers after being closed earlier this week when thousands of mysterious black tar-like balls washed ashore, prompting health concerns.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 position-relative">
+                                <img src="899b9600-8dca-11ef-b202-61502f629ef4.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news3.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="7f6b97d0-87b6-11ef-81f8-1f28bcc5be15.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hull KR fan flies 10,500 miles for Grand Final</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">An Australian rugby league fan has flown 10,500 miles (16,864 km) to watch Hull Kingston Rovers in this weekend's Grand Final game.</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news4.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">He went through hell’: Australians on Assange’s release</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Julian Assange, the Wikileaks founder, has been freed from a British prison following a plea deal with US authorities.
+
+                                        He had been in prison for five years and before that had spent seven years hiding in Ecuador’s London embassy.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="2ebd1350-3378-11ef-90be-b75b34b0bbb2.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-12 col-xl-6">
+                <a href="news5.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="_133220806_gettyimages-2148547503.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Seven teens with alleged 'extremist ideology' arrested in Sydney raids</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Australian police have arrested seven teenagers as part of a wave of counter-terrorism raids across Sydney, claiming it was "likely" the youths may have been plotting an attack.</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news6.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Australian PM calls Elon Musk an 'arrogant billionaire' in row over attack footage</h5>
+                                    <p class="card-text text-body-secondary">2 January 2025</p>
+                                    <p class="card-text">Australia's leader has called Elon Musk an "arrogant billionaire" in an escalating feud over X's reluctance to remove footage of a church stabbing.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="_133214208_b1f5018d0c801b3128dc56aa7b0d1290700f7cb50_60_5500_30941000x563.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+                <button onclick="showMap()" class="btn btn-secondary mt-3">Get Location</button>
+            </div>
+    
+            
+            
+        </div>
+    </div>
+    <br>
+    <!-- Geolocation Part -->
+   <div id="map">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424143.8759381763!2d150.6023158763147!3d-33.84780524032096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129838f39a743f%3A0x3017d681632a850!2sSydney%20NSW%2C%20Australia!5e0!3m2!1sen!2s!4v1739881019714!5m2!1sen!2s" class=" w-100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+
+   <script>
+       function showMap() {
+           var mapDiv = document.getElementById('map');
+           mapDiv.style.display = 'block'; 
+       }
+   </script>
+   <br><br><br>
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+                </div>
+                
+              
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="world.html" class="text-white ">Today in World</a></li>
+                        <li><a href="business/business.html" class="text-white ">Business</a></li>
+                        <li><a href="sports/index.html" class="text-white ">Sports</a></li>
+                        <li><a href="politics/Politics.html" class="text-white ">Politics</a></li>
+                        <li><a href="technology/technology.html" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+                
+          
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white ">Home</a></li>
+                        <li><a href="about.html" class="text-white ">About</a></li>
+                        <li><a href="contact.html" class="text-white ">Contact</a></li>
+                        <li><a href="" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+    
+             
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white ">General Inquiries</a></li>
+                        <li><a href="contact.html" class="text-white ">Email</a></li>
+                        <li><a href="contact.html" class="text-white ">Contact</a></li>
+                     
+                    </ul>
+                </div>
+            </div>
+    
+    
+            <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+           
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+             
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

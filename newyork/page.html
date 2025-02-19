@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .hover-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .hover-overlay:hover {
+            opacity: 1 !important;
+        }
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        #map {
+            display: none;
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+
+</head>
+<body onload="showLocation()">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            
+
+            <a href="..//index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                <h3>DNBC</h3>
+            </div></a>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button type="submit">Search</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="..//index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                            Select Location of Your City
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="page.html">New York</a></li>
+                                <li><a class="dropdown-item" href="..//london/london.html">London</a></li>
+                                <li><a class="dropdown-item" href="..//Los Angeles/city.html">Los Angeles</a></li>
+                                <li><a class="dropdown-item" href="..//paris.html">Paris</a></li>
+                                <li><a class="dropdown-item" href="..//sydney/city.html">Sydney</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br><br>
+
+    <div class="container-fluid my-4">
+        <div class="container-fluid bg-dark text-white position-relative" style="height: 300px; padding: 0;">
+            <img src="https://assets.editorial.aetnd.com/uploads/2010/01/new-york-city-edted.jpg" alt="New York" class="w-100 h-100" style="object-fit: cover; filter: brightness(80%);">
+            <div class="position-absolute top-50 start-50 translate-middle text-center ">
+                <h1 class="display-6" style="font-style: italic; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">NEW YORK</h1>
+                <p>Stay updated with the latest technology news, insights, and analyses from around the world.</p>
+            </div>
+        </div>
+    </div>
+    
+
+  
+    
+
+
+    <!-- end -->
+
+    <div class="container mt-4 my-2">
+        <div class="row g-4 p-2">
+
+            <h1 class="border-bottom border-black">Latest News</h1>
+            
+            
+            <div class="col-lg-8 col-md-12 border-bottom border-black">
+                <a href="news1.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/8361/live/566d2ac0-dd28-11ef-8485-ed1fe3642791.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex flex-column justify-content-center bg-secondary-subtle ">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Enduring mystery of New York icon with Welsh owner</h5>
+                                    <p class="card-text">24 January 2025</p>
+                                    <p class="card-text">The mystery endures over which man with Welsh roots owned the island with a huge role in US history.</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+
+            
+            <div class="col-lg-4 col-md-12 g-2">
+                
+                <div class="row row-cols-1 row-cols-md-2 g-2">
+                    <a href="news2.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black g-2">
+                        <div class="card bg-secondary-subtle  border-0">
+                            <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/015a/live/cde564d0-e572-11ef-8b8c-73fc0bbdc30b.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Autopsy rules beating death of shackled New York inmate homicide</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="news3.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black g-2">
+                        <div class="card bg-secondary-subtle border-0">
+                            <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/52e0/live/37fb6860-e7fd-11ef-bd1b-d536627785f2.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Suspect in Salman Rushdie attack goes on trial in New York</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="news4.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black">
+                        <div class="card bg-secondary-subtle border-0">
+                            <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0kqk8ht.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">Why 'snowy' New York winters are a bit of a myth</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="news5.html" style="text-decoration: none;">
+                    <div class="col border-start border-bottom border-black">
+                        <div class="card bg-secondary-subtle  border-0">
+                            <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/7942/live/e54b8370-e00e-11ef-8992-59cb2eb4d7c4.jpg.webp" class="img-fluid" alt="News">
+                            <div class="card-body">
+                                <h6 class="card-title">New York doctor indicted for prescribing Louisiana teen abortion pill</h6>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <h1 class="border-bottom border-black">Trending News In New York</h1>
+            
+            <div class="col-12 col-xl-6 ">
+                <a href="news6.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/be47/live/d2e0c0c0-d20c-11ef-8196-7b73080f7f2f.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Listen: NFL - Miami Dolphins @ New York Jets</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Listen to BBC Radio 5 Sports Extra commentary as Miami Dolphins travel to face the New York Jets in the NFL.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news7.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-top border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">New York first US city to have congestion charge</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">The scheme has faced resistance, including from President-elect Donald Trump.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/20d8/live/8e9afea0-cbbb-11ef-8639-9b70a770c8e5.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news8.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/78c8/live/1bbf1390-e811-11ef-892c-dff91c68af80.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">US justice department tells prosecutors to drop NYC mayor's corruption case</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">A Trump official says the indictment has hindered Eric Adams in his work to tackle illegal immigration.</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news9.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-top border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Flurry of resignations after DOJ tells prosecutors to drop Eric Adams case</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Top New York attorney Danielle Sassoon is among several prosecutors to quit over an order to drop a corruption case against Eric Adams.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/b664/live/003cd4b0-ea4e-11ef-bc49-67f493a63bc5.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-12 col-xl-6">
+                <a href="news10.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/bb4c/live/baaea1c0-eb07-11ef-a9f0-1fe0b0397bb7.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-bottom border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Who is Danielle Sassoon, prosecutor who quit in protest from Trump justice department?</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">Danielle Sassoon resigned after Trump's justice department ordered her to drop the corruption case against New York Mayor Eric Adams.</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6">
+                <a href="news11.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center bg-secondary-subtle border-start border-top border-black">
+                                <div class="card-body">
+                                    <h5 class="card-title">Transgender references removed from Stonewall monument website</h5>
+                                    <p class="card-text text-body-secondary">24 January 2025</p>
+                                    <p class="card-text">On the National Park Service website, the acronym LGBTQ+ has been shortened to LGB, standing for lesbian, gay and bisexual.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/d5a6/live/7c23b650-eaff-11ef-a9f0-1fe0b0397bb7.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+                <button onclick="showMap()" class="btn btn-secondary mt-3">Get Location</button> 
+            </div>
+    
+            
+            
+        </div>
+    </div>
+    <br>
+     <!-- Geolocation Part -->
+    <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387196.0767988105!2d-74.3091582417461!3d40.696672671456476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1739796355034!5m2!1sen!2s" class="w-100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <script>
+        function showMap() {
+            var mapDiv = document.getElementById('map');
+            mapDiv.style.display = 'block'; 
+        }
+    </script>
+    <br><br><br>
+
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+                </div>
+                
+              
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="..//world.html" class="text-white ">Today in World</a></li>
+                        <li><a href="..//business/business.html" class="text-white ">Business</a></li>
+                        
+                        <li><a href="..//sports/index.html" class="text-white ">Sports</a></li>
+                        <li><a href="..//politics/Politics.html" class="text-white ">Politics</a></li>
+                        <li><a href="..//technology/technology.html" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+                
+          
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="..//index.html" class="text-white ">Home</a></li>
+                        <li><a href="..//about.html" class="text-white ">About</a></li>
+                        <li><a href="..//contact.html" class="text-white ">Contact</a></li>
+                        <li><a href="#" class="text-white ">Services</a></li>
+                    </ul>
+                </div>
+    
+             
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="..//contact.html" class="text-white ">General Inquiries</a></li>
+                        <li><a href="..//contact.html" class="text-white ">Email</a></li>
+                        <li><a href="..//contact.html" class="text-white ">Contact</a></li>
+                     
+                    </ul>
+                </div>
+            </div>
+    
+    
+            <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+           
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+             
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

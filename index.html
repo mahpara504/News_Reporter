@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Sidebar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+      
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+     
+       
+        .sidebar {
+            position: absolute;
+            top:0;
+            left: 0;
+            bottom:0;
+            width: 200px;
+            
+            color: white;
+            padding-top: 20px;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            z-index: 1;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+             padding: 15px;
+            text-align: center;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #495057;
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 65px;
+            left: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .sidebar-toggle {
+            position: absolute;
+            top: 12px;
+            left: 5px;
+            font-size: 24px;
+            color:white;
+            background-color: transparent;
+            border: none;
+            z-index: 1000;
+
+         }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .navbar-nav {
+                margin-left: auto;
+                margin-right: 20px;
+            }
+
+        }
+        .hover-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .hover-overlay:hover {
+            opacity: 1 !important;
+        }
+     
+    
+
+        .section-title{
+            font-size: 25px;
+              
+            padding-bottom: 5px;
+            display: inline-block;
+            border-bottom: 2px solid black;
+            position: relative;
+        }
+  
+    
+    .container{
+           
+            width: 7000px;
+            margin-top: 100px;
+        }
+        .card-body{
+            background-color: white;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar bg-dark" id="sidebar">
+        <span class="close-btn" id="closeSidebar">&times;</span> <br><br><br><br>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="world.html">World</a></li>
+            <li><a href="politics/Politics.html">Politics</a></li>
+            <li><a href="business/business.html">Business</a></li>
+            <li><a href="technology/technology.html">Technology</a></li>
+            <li><a href="sports/index.html">Sports</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content" id="content">
+     
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+
+                <a href="index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                    <h3>DNBC</h3>
+                </div></a>
+
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." id="search-bar">
+                    <button type="submit">Search</button>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                                Select Location
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="newyork/page.html">New York</a></li>
+                                <li><a class="dropdown-item" href="london/london.html">London</a></li>
+                                <li><a class="dropdown-item" href="Los Angeles/city.html">Los Angeles</a></li>
+                                <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+                                <li><a class="dropdown-item" href="sydney/city.html">Sydney</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div><br><br><br>
+    <div class="container text-center mt-3">
+        <h1>Welcome to DNBC News</h1>
+        <p>Select your city from the menu to view news and location details.</p>
+    </div>
+
+    <div class="container mt-3">
+
+        <div id="image" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#image" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#image" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#image" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#image" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#image" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner" >
+            <div class="carousel-item active" data-bs-interval="5000">
+              <a href=""><img src="images.html/0b692b30-e072-11ef-bd1b-d536627785f2.jpg" class="d-block w-100 img-fluid" alt=""></a>
+              <div class="carousel-caption  d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5 class="text-white fw-bold">Hamas releases three Israeli hostages in Gaza</h5>
+                <p class="text-white">It is the fourth release of hostages since the ceasefire deal between Israel and Hamas began on 19 January</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <a href=""><img src="images.html/d4e50260-e048-11ef-9034-e1ec5ad2e5b7.jpg (1).webp" class="d-block w-100 img-fluid" alt=""></a>
+              <div class="carousel-caption d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5 class="text-white fw-bold">Medical jet carrying six crashes into Philadelphia neighbourhood</h5>
+                <p class="text-white">A small medical transport plane crashed into several buildings in north-east Philadelphia on Friday evening, setting homes and vehicles ablaze and injuring people on the ground.</p>
+              </div>
+            </div>
+            
+            <div class="carousel-item" data-bs-interval="4000">
+              <a href=""><img src="images.html/927bdfd0-e097-11ef-a319-fb4e7360c4ec.jpg.webp" class="d-block w-100 img-fluid" alt=""></a>
+              <div class="carousel-caption d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5 class="text-white fw-bold">Trump to hit Canada, Mexico and China with tariffs on Saturday</h5>
+                <p class="text-white">US President Donald Trump will impose tariffs on Saturday of 25% on Mexico, 25% on Canada and 10% on China, says the White House.
+  
+                  But Trump said on Friday that Canadian oil would be hit with lower tariffs of 10%, which could take effect later, on 18 February.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <a href=""><img src="images.html/fb4cdbe0-e092-11ef-a819-277e390a7a08.jpg.webp" class="d-block w-100" alt=""></a>
+              <div class="carousel-caption  d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5 class="text-white fw-bold">Medical jet carrying six crashes into Philadelphia neighbourhood</h5>
+                <p class="text-white">The Learjet was carrying four crew, a child patient and her mother when it crashed on Friday.</p>
+              </div>
+            </div>
+  
+            <div class="carousel-item" data-bs-interval="4000">
+              <a href=""><img src="images.html/4b1e7560-e044-11ef-bd1b-d536627785f2.jpg.webp" class="d-block w-100" alt=""></a>
+              <div class="carousel-caption d-md-block bg-dark bg-opacity-50 rounded p-3">
+                <h5 class="text-white fw-bold">Canada 'will stand up to a bully', says PM contender Carney over Trump tariffs</h5>
+                <p class="text-white">The prime ministerial candidate responds to Donald Trump imposing 25% tariffs on Canada.</p>
+              </div>
+            </div>
+         
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#image" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#image" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  
+      </div>
+<br><br>
+
+
+    <h2 class="text-center text-decoration-underline">Latest News</h2><br><br><br>
+
+    <div class="container-fluid bg-light">
+        <div class="row">
+          
+            <div class="col-lg-6 col-md-12">
+                <a href="h1.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">He's emboldened, he's organized and he's still Trump: Takeaways from the president's opening days</h5>
+                                    <p class="card-text text-body-secondary">World</p>
+                                    <p class="card-text">Donald Trump's first week in office isn't over yet, but what the Republican president has done so far offers clues about how his next four years in the White House may unfold.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://dims.apnews.com/dims4/default/feeaa30/2147483647/strip/true/crop/4542x3024+69+0/resize/350x233!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fbd%2F0e%2F4e865d435d4f60d61408ee0a26e2%2F3b43c63b0bf743749a64e04679c3c24f" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+          
+             <div class="col-md-12 col-lg-6">
+                <a href="h2.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Funding freeze sparks Democratic uproar as party grapples with how to take on Trump</h5>
+                                    <p class="card-text text-body-secondary">Politics</p>
+                                    <p class="card-text">
+                                        Donald Trump's move to pause trillions of dollars in federal grants and loans awakened widespread Democratic resistance to the new president's second term that was felt Tuesday on Capitol Hill, to helm the party's national committee.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://media.cnn.com/api/v1/images/stellar/prod/wls.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <a href="h3.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">How Mbappe & Bellingham sparked Real Madrid's resurgence</h5>
+                                    <p class="card-text text-body-secondary">Sports</p>
+                                    <p class="card-text">The rest of Europe have been warned - Real Madrid are back.
+                                        They have already lifted the Uefa Super Cup this season.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/ace/standard/800/cpsprodpb/6490/live/b579d610-dd8e-11ef-baa4-c3fde825e262.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="h4.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Roman Abramovich could owe UK £1bn over tax dodge that helped bankroll Chelsea FC</h5>
+                                    <p class="card-text text-body-secondary">Business</p>
+                                    <p class="card-text">Sanctioned Russian oligarch Roman Abramovich could owe the UK up to £1bn after a botched attempt to avoid tax on hedge fund investments.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/f909/live/98585230-dd72-11ef-bc01-8f2c83dad217.jpg.webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="h5.html" style="text-decoration: none;">
+                    <div class="card shadow-sm border-0">
+                        <div class="row g-0">
+
+                            
+                            
+                            <div class="col-md-8 d-flex flex-column justify-content-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">The story of how Meryl Streep evacuated her home during the LA wildfires is harrowing</h5>
+                                    <p class="card-text text-body-secondary">World</p>
+                                    <p class="card-text">
+                                        Meryl Streep had to take matters into her own hands when evacuating from the Los Angeles wildfires earlier this month.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 position-relative">
+                                <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2152939117.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                    <h5 class="text-center">Read More</h5>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+      </div> <br><br>
+
+      <!-- .... -->
+
+       
+        <h2 class="text-center text-decoration-underline">More To Explore</h2>
+        <div class="container py-4 bg-light">
+            <div class="row g-4">
+                
+                <div class="col-12 col-xl-6">
+                    <a href="card/card1.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+    
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://mediaim.expedia.com/destination/1/2dfd3b4e9b44400804602387f60f7cca.jpg" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The top global development employers in the Philippines</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">We are continuing our exploration of the top global development employment opportunities in key regions with a look at the organizations hiring the most in the Philippines.</p>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <a href="card/card2.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Exclusive: State Department issues stop-work order on US aid</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">The memo puts a pause on new foreign aid spending, as well as a stop-work order for existing grants and contracts.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://res.cloudinary.com/devex/image/fetch/c_scale,f_auto,q_auto,w_614/https://neo-assets.s3.us-east-1.amazonaws.com/news/images/109160.jpg" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <a href="card/card3.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+    
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://online.anyflip.com/pwdbj/theb/files/shot.jpg" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">World Bank, Asian Development Bank under fire for mutual reliance plan</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">NGOs say the banks obligation to prevent and remedy harm “cannot be delegated.”</p>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <a href="card/card4.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+    
+                                
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Creating a more inclusive world for people with intellectual disabilities</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">Special Olympics' Chief of Global Youth & Education, Jackie Jodl, joins Raj Kumar for a podcast episode looking at the state of social inclusion for people with intellectual disabilities.</p>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://res.cloudinary.com/devex/image/fetch/c_fill,w_293/https://i.ytimg.com/vi/lIiSG6dRXYg/hqdefault.jpg" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+    
+                <div class="col-12 col-xl-6">
+                    <a href="card/card5.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+    
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQmBX0stPvXSi3HdLzB7bIlZwPSL2WneoiRee4d7EvWiziqxzWe" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">WHO goes on hiring freeze amid increasingly 'acute' funding situation</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">In the email to staff, WHO chief Tedros Adhanom Ghebreyesus said the U.S. announcement "has made our financial situation more acute" and the measures they're taking are meant to "reduce costs and realize efficiency gains."</p>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-12 col-xl-6">
+                    <a href="card/card6.html" style="text-decoration: none;">
+                        <div class="card shadow-sm border-0">
+                            <div class="row g-0">
+    
+                                
+                                
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title">US lawmakers urge Secretary of State Marco Rubio to unfreeze aid</h5>
+                                        <p class="card-text text-body-secondary">24 January 2025</p>
+                                        <p class="card-text">Two top Democrats on congressional committees overseeing U.S. foreign aid spending expressed "deep concern over the lives placed at risk because of the Administration’s freeze on foreign assistance funding."</p>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-4 position-relative">
+                                    <img src="https://res.cloudinary.com/devex/image/fetch/c_fill,w_293/https://neo-assets.s3.us-east-1.amazonaws.com/news/images/109161.png" class="img-fluid h-100 w-100" alt="News Image" style="object-fit: cover;">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75 text-white opacity-0 hover-overlay">
+                                        <h5 class="text-center">Read More</h5>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        
+                
+                
+            </div>
+        </div>
+      </div>
+      <br><br>
+
+      <section id="services" class="py-5">
+        <div class="container-fluid">
+            <h2 class="text-center animate-text text-dark-50">Our Services</h2>
+            <p class="text-center mb-5 animate-text text-dark-50">
+                We provide comprehensive news coverage, bringing you the latest updates from around the globe.
+            </p>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100 bg-black">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">NEWS ALERT</h5>
+                            <p class="card-text text-black">Timely and accurate updates on major events as they happen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100 bg-black">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">SUBSCRIPTION PLANS</h5>
+                            <p class="card-text text-black">Subscribe for premium access to in-depth reports and analysis.<p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100 bg-black">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">CUSTOMIZABLE NEWS FEED</h5>
+                            <p class="card-text text-black">Personalize your homepage to receive updates on topics you care about.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100 bg-black">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">MULTIMEDIA CONTENT</h5>
+                            <p class="card-text text-black">Watch live streams, video reports, and interviews.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100 bg-black">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">ADVERTISE WITH US</h5>
+                            <p class="card-text text-black">Learn more about advertising opportunities on our platform.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100 bg-black">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">LIVE COVERAGE</h5>
+                            <p class="card-text text-black">Real-time streaming of significant events, press conferences, and breaking stories. </p>
+                        </div>
+                    </div>
+                </div>
+                
+    
+      </section>
+
+      <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+                </div>
+                
+              
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="world.html" class="text-white ">Today in World</a></li>
+                        <li><a href="business/business.html" class="text-white ">Business</a></li>
+                        <li><a href="sports/index.html" class="text-white ">Sports</a></li>
+                        <li><a href="politics/Politics.html" class="text-white ">Politics</a></li>
+                        <li><a href="technology/technology.html" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+                
+          
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white ">Home</a></li>
+                        <li><a href="about.html" class="text-white ">About</a></li>
+                        <li><a href="contact.html" class="text-white ">Contact</a></li>
+                        <li><a href="" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+    
+             
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-white ">General Inquiries</a></li>
+                        <li><a href="contact.html" class="text-white ">Email</a></li>
+                        <li><a href="contact.html" class="text-white ">Contact</a></li>
+                     
+                    </ul>
+                </div>
+            </div>
+    
+    
+            <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+           
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+             
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Toggle Sidebar
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const closeSidebar = document.getElementById('closeSidebar');
+        const content = document.getElementById('content');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            content.classList.add('active');
+        });
+
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            content.classList.remove('active');
+        });
+
+        document.getElementById("contactForm").onsubmit = function(e) {
+  e.preventDefault();
+  alert("Thank you for contacting us! We will get back to you soon.");
+  modal.hide(); 
+}
+
+    </script>
+</body>
+
+</html>

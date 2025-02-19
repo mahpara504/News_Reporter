@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <style>
+    .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+   </style>
+</head>
+<body class="bg-secondary-subtle">
+
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      
+
+        <a href="..//index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+            <h3>DNBC</h3>
+        </div></a>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search..." id="search-bar">
+            <button type="submit">Search</button>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                        Select Location
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="..//newyork/page.html">New York</a></li>
+                        <li><a class="dropdown-item" href="..//london/london.html">London</a></li>
+                        <li><a class="dropdown-item" href="..//Los Angeles/city.html">Los Angeles</a></li>
+                        <li><a class="dropdown-item" href="..//paris.html">Paris</a></li>
+                        <li><a class="dropdown-item" href="">Sydney</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+        <div class="p-2 my-2 text-center text-white bg-black">
+            <h3 class="p-2" style="font-size: large;">Will young developers take on key open source software?</h3>
+            <p class="text-center ">24 January 2025</p>
+        </div>
+    
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12 text-center">
+                <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/741b/live/fa936d90-de3a-11ef-a69b-6ddb4eb9391c.jpg.webp" class="img-fluid" alt="News Image">
+            </div>
+        </div>
+    
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <pre class="p-3 bg-light text-dark" style="white-space: pre-wrap; word-wrap: break-word;">
+
+                    Many of us have prepared instructions and critical information for our family in the event of our sudden demise. For Daniel Stenberg, that includes passwords for his Google and GitHub accounts.
+
+                    That’s because he’s the founder of curl, an open source internet transfer engine that has been downloaded billions of times and is used to transfer data to and from computer servers.
+                    
+                    It was first released by Mr Stenberg in 1996 and is now used by millions every day.
+                    
+                    It's important that someone is able to maintain curl when he steps away.
+                    
+                    “I just want to make sure that everything is there so the day I go away, someone can take over,” Mr Stenberg says.
+
+                    It’s a problem confronting many of the open source software pioneers who transformed the technology world in the 1990s and early 2000s.
+
+Their ethos was that anyone could contribute to the development of an open source application or operating system – and the software and underlying code could be used, modified, and distributed for free.
+
+The open source movement broke the stranglehold of big technology companies, spurred innovation and underpins much of today’s technology landscape.
+
+In 1999, Loris Degioanni made his first contributions to an open source network analysis tool that eventually became Wireshark, as part of his master’s thesis. “My concern was graduating,” he says, not succession planning or the long-term future of the project.
+
+Almost 30 years on, Mr Degioanni is now CTO and founder of cybersecurity firm Sysdig, which is a key sponsor of Wireshark.
+
+“We're approaching the time when the founders of these early open source projects are starting to get old,” he says.
+
+While projects do come and go, he explains, some remain relevant over the years, and founders and maintainers usually want to ensure they live on while there is demand. That’s not just because they’ve invested time in developing the code itself, but also because they have spawned communities, both virtual and in the real world.
+
+But while the likes of Mr Stenberg and Mr Degioanni can take action to ensure the keys to the kingdom are passed on, ensuring there is someone to pass them to can be a challenge.
+
+Many in the open source community worry there are not enough younger developers willing to get involved in contributing to or maintaining projects. This is often unpaid work after all.
+
+Even Linus Torvalds, the creator of Linux, the operating system which kick-started the open source revolution in the early 1990s, noted at the Open Source Summit Europe in September that the “kernel maintainers are aging”.
+
+Amanda Brock, CEO of OpenUK, a non-profit organization which represents the UK’s open technology community, says younger developers might not appreciate the grip that closed software companies had in earlier decades.
+
+“You've got a next generation who haven't engaged as a philanthropic community and volunteer community in the same way, at the same scale.”
+
+There are technology barriers to address too. Many key open source projects were originally written in C, a coding language first developed in the early 1970s.
+
+While C is still taught in universities, it is no longer widely used in the commercial world, Mr Degioanni explains. “The fact that C is the main language makes it harder to attract a younger generation.”
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+        
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+                </div>
+                
+              
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Today in World</a></li>
+                        <li><a href="#" class="text-white ">Business</a></li>
+                        <li><a href="#" class="text-white ">Entertainment</a></li>
+                        <li><a href="#" class="text-white ">Sports</a></li>
+                        <li><a href="#" class="text-white ">Politics</a></li>
+                        <li><a href="#" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+                
+          
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Home</a></li>
+                        <li><a href="#" class="text-white ">About</a></li>
+                        <li><a href="#" class="text-white ">Contact</a></li>
+                        <li><a href="#" class="text-white ">Services</a></li>
+                        <li><a href="#" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+    
+             
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                </div>
+            </div>
+    
+    
+            <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+           
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+             
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+</body>
+</html>

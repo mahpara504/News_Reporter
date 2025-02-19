@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body  class="bg-secondary-subtle">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+       
+
+        <a href="index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+            <h3>DNBC</h3>
+        </div></a>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search..." id="search-bar">
+            <button type="submit">Search</button>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                        Select Location of Your City
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="newyork/page.html">New York</a></li>
+                        <li><a class="dropdown-item" href="london/london.html">London</a></li>
+                        <li><a class="dropdown-item" href="Los Angeles/city.html">Los Angeles</a></li>
+                        <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+                        <li><a class="dropdown-item" href="sydney.html">Sydney</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br><br>
+ <div class="container">
+        <div class="p-2 my-2 text-center text-white bg-black">
+            <h3 class="p-2" style="font-size: large;">Embattled Macron seeks boost from Notre Dame reopening</h3>
+            <p class="text-center ">7 December 2024</p>
+        </div>
+    
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12 text-center">
+                <img src="images.html/369efbd0-b3eb-11ef-b4ee-7f3a9069a0a6.png.webp" class="img-fluid" alt="News Image">
+            </div>
+        </div>
+    
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <pre class="p-3 bg-light text-dark" style="white-space: pre-wrap; word-wrap: break-word;">
+                    A gravely weakened President Emmanuel Macron hopes to win a new lease of political life from Saturday's ceremonial reopening of Notre Dame.
+
+                    Joined by US President-elect Donald Trump, Prince William and other international figures, including Ukrainian President Volodymyr Zelensky, Macron will seek to present the renovated cathedral as a symbol of France's inner reserves of creative strength.
+                    
+                    In a speech marking the occasion, he will urge the world to see beyond the country's current political crisis and admire the determination, organisation and hard graft that have rescued one of France's most famous buildings in just five years.
+                    
+                    The long-awaited event comes just as France enters a period of deep uncertainty triggered by the fall of Prime Minister Michel Barnier's government on Wednesday. A replacement has yet to be named.
+                    
+                    Five-and-a-half years after the devastating fire, Macron had planned to make the cathedral's reopening the optimistic climax of 2024 - a year also marked by the Paris Olympic Games.
+                    
+                    But while he seeks to capitalise on the project's undoubted success, a contrast is unavoidable between the depressed state of the country as a whole, and the soaring achievement of fixing this magnificent Gothic cathedral. The ceremony marks the moment that the Catholic Church retakes possession of the cathedral, ahead of the first Mass to be celebrated on Sunday.
+
+                    Archbishop Laurent Ulrich will knock on the front portal using a staff made from one of the rescued roof-timbers. Answered by the choir, which will already be inside, he will enter the cathedral and bid the organ "ring forth praises of God".
+                    
+                    Macron had originally intended to make an address inside the cathedral, but was advised that this would contravene France's strict rules on secularity.
+                    
+                    As a compromise, he visited the cathedral eight days ago to thank hundreds of craftsmen and women - a televised tour which allowed the world a first glimpse of the stunningly rejuvenated interior.
+                    
+                    The evening's religious ceremony will be followed by a concert featuring Chinese pianist Lang Lang and Canadian singer Garou.
+                    
+                    Sunday's Mass - which the president will attend - will be conducted by Archbishop Ulrich in the presence of 170 French bishops and priests from 106 Paris parishes. The first Mass for the public is on Sunday evening, but booking was required - as it is for all the Masses planned for the week ahead. One dignitary who will not be attending is Pope Francis, though he has sent a message that will be read out on Saturday.
+
+                    The Pope's relations with France are cordial rather than friendly. He is reported to have been angered by French policies to cut immigration, and by Macron's decision to put the right to abortion in the constitution.
+                    
+                    In the French press, the Pope is said to be more interested in the younger and growing Christian communities of the southern hemisphere than the medieval Churches of Europe.
+                    
+                    The fire on 15 April 2019 destroyed the medieval roof-timbers, the spire and three sections of stone vaulting. An appeal for donors raised €850m ($897m; £704m), and 2,000 masons, carpenters, art-restorers, engineers and architects worked on the project.
+                    
+                    "The moment I looked inside on the day after the fire, I knew that everything would be all right. The damage was nothing like as bad as I had feared," said cathedral chief architect Philippe Villeneuve, who disputes the widespread theory that Notre-Dame came close to total collapse.
+                    
+                    "Apart from replacing the roof and spire, the main task was decontamination. Everything was covered in lead oxide powder. But that meant we could restore and clean - which explains why the cathedral looks so beautiful today."
+                    
+                    Before the fire, the cathedral was already deemed to be in a state of severe disrepair, and scaffolding was in place to renovate the spire and other external parts much damaged by corrosion.
+                    
+                    Some 12 million people per year were visiting the cathedral, a number which is now expected to rise. A new route around the building has been devised to cope with the 100 visitors a minute expected to come here at the height of the tourist season.
+                    
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+        
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+                </div>
+                
+              
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Today in World</a></li>
+                        <li><a href="#" class="text-white ">Business</a></li>
+                        <li><a href="#" class="text-white ">Entertainment</a></li>
+                        <li><a href="#" class="text-white ">Sports</a></li>
+                        <li><a href="#" class="text-white ">Politics</a></li>
+                        <li><a href="#" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+                
+          
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Home</a></li>
+                        <li><a href="#" class="text-white ">About</a></li>
+                        <li><a href="#" class="text-white ">Contact</a></li>
+                        <li><a href="#" class="text-white ">Services</a></li>
+                        <li><a href="#" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+    
+             
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                </div>
+            </div>
+    
+    
+            <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+           
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+             
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+</body>
+</html>

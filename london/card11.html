@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+
+
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-left: 60px;
+            padding-top: 10px;
+        }
+
+
+
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-secondary-subtle">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+
+
+            <a href="..//index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+                <h3>DNBC</h3>
+            </div></a>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-bar">
+                <button type="submit">Search</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Select Location of Your City
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="..//newyork/page.html">New York</a></li>
+                            <li><a class="dropdown-item" href="london.html">London</a></li>
+                            <li><a class="dropdown-item" href="..//Los Angeles/city.html">Los Angeles</a></li>
+                            <li><a class="dropdown-item" href="..//paris.html">Paris</a></li>
+                            <li><a class="dropdown-item" href="sydney.html">Sydney</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container">
+        <div class="p-2 my-2 text-center text-white bg-black">
+            <h3 class="p-2" style="font-size: large;">Michelin star hotspot outside of London 'not many people know about'</h3>
+            <p class="text-center ">24 January 2025</p>
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12 text-center">
+                <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/622d/live/b8f9f510-ead4-11ef-bb86-5f3253e055e6.jpg.webp" class="img-fluid" alt="News Image">
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <pre class="p-3 bg-light text-dark" style="white-space: pre-wrap; word-wrap: break-word;">
+
+                    About 8,000 people live in Aughton yet the Lancashire village hosts not one, but three restaurants with Michelin stars – more than big city neighbours Liverpool and Manchester combined.
+
+                    The latest awards were announced at a glittering ceremony this week, with Aughton's Moor Hall ascending to the catering version of Everest when it attained the prestigious three-star rating.
+                    
+                    Judges described the restaurant, housed in a 16th Century aristocratic property since 2017, as a "delightful gastronomic getaway" where "every dish is now simply brilliant, with consistent levels of precision, balance and purity of flavour".
+                    
+                    Chef Mark Birchall, who was born in the Lancashire town of Chorley, says it's "always great to have a [Michelin-starred] restaurant in the county I'm from".
+                    
+                    
+                    Except he doesn't have one acclaimed restaurant, he has two.
+                    
+                    Because next door is The Barn, which opened as the "more informal sister" some months after Moor Hall, and secured one Michelin star in 2022 for its "modern and imaginative" cooking.
+                    
+                    "We start on our doorstep and work our way out to some amazing producers," Birchall says.
+                    
+                    Moor Hall A restaurant worker holds trays of salad ingredients as he walks through a walled kitchen garden with green ingredients lined either side. A glass greenhouse is in the backgroundMoor Hall
+                    Lancashire is known as the "salad bowl of England" because of the growers on the banks of the Ribble Estuary
+                    
+                    Moor Hall also has a Michelin green star - a rating introduced in 2021 to recognise exemplary standards in sustainable practices.
+                    
+                    Lancashire is often dubbed the "salad bowl of England" and Birchall says there are "amazing tomato growers literally around the corner".
+                    
+                    "We're so lucky - it's an amazing county, it's got beautiful surroundings, the produce that is grown here is fantastic."
+                    
+                    But while the location is surrounded by farms, he says they will also source food from other counties and countries if necessary as the restaurant's priority is "the food, it's solely about that".
+                    
+                    "We go as far as we need to go to get the best we can afford to put on the menu."
+                    
+                    Jon Parker Lee Tim Allen wearing his chef's apron in the restaurant kitchen with cookers and utensils behindJon Parker Lee
+                    Sō-lō, which is run by chef Tim Allen, won its Michelin star in 2023 - within 17 months of opening
+                    
+                    Amid his Valentine's Day bookings, Tim Allen - who bagged a Michelin star in 2023 for his restaurant Sō-lō in Town Green, Aughton - says Birchall's success has "put the place on the map".
+                    
+                    He consulted the chef before opening his venture in 2021, adding: "Moor Hall has always been world-class - we're very lucky, it's brought much focus and Mark's three-star success is just amplifying that."
+                    
+                    Allen says his team take advantage of being in what he calls the "larder of Lancashire", using local produce from strawberries to brassicas.
+                    
+                    "If we're buying something local, it has to be quality... the name of the game is consistency."
+                    
+                    Despite sharing Birchall's focus on ingredients and a relentless push for excellence, he adds that Sō-lō offers "something different... otherwise it would be boring if we're all doing the same things".
+                    
+                    "We need our local regulars – of which we have a lot - and we need to develop as a destination."
+                    
+                    Moor Hall Wooden table with a white dish serving a colourful fish dish at Moor HallMoor Hall
+                    Achieving a three-star rating is "the absolute global epitome", according to restaurant critic Thom Hetherington
+                    
+                    Manchester-based restaurant critic Thom Hetherington told BBC Radio Lancashire: "The interesting thing for somewhere like Aughton and Lancashire generally, is that restaurants don't work as well when they're out on their own.
+                    
+                    "They work better when they are a cluster because then, instead of just feeding people locally, which is important, you start pulling in visitors.
+                    
+                    "Aughton has three Michelin-starred restaurants so that is going to be pulling people from all over. So that's more money, more spend going into the local economy, more jobs that's supporting local suppliers."
+                    
+                    Despite the cost-of-living crisis, he says "the upper end of the restaurant scene is stronger than ever".
+                    
+                    "One of the most valuable things that restaurants do, is bring in that outside spend into an area - it's almost like inward investment."
+                    
+                    Jon Parker Lee aerial drone image of Aughton village with people playing on tennis court, next to fields and white housesJon Parker Lee
+                    Aughton has about 8,000 residents and three Michelin-starred restaurants
+                    
+                    The three Michelin-starred restaurants are within a three-minute drive but, on hearing that the village had more than many northern cities combined, local butcher James Henshaw admits: "Bloomin' heck, I didn't know that myself.
+                    
+                    "If I am brutally honest, many people don't know about it."
+                    
+                    Vikki Harris, from the Marketing Lancashire body, says they're "delighted" by Moor Hall's recent inclusion in the prestigious three-star category.
+                    
+                    Only nine other restaurants in the UK have reached that pinnacle, including six in London, two in the royal borough of Windsor and one in Cumbria.
+                    
+                    "We're sure that the news of an additional star for Aughton - bringing its total to five - will be very welcomed," Ms Harris says, "and we'll see yet more people putting the village on their must-visit list."
+                    
+                    Jon Parker Lee James Henshaw wearing a dark baseball cap and butcher's apron, smiling outside his business frontJon Parker Lee
+                    Butcher James Henshaw says villagers and visitors are "very passionate about food"
+                    
+                    Mr Henshaw, who lives a 10-minute drive away, says he "jumped at the opportunity" to open his butcher's shop in the area at the age of 23, adding: "It looked like a nice, busy area - I thought it would do really well. I know of other shops in this area that do really, really well.
+                    
+                    "I think it helps being in a village where everyone seems very, very passionate about food. We also see plenty of incomers, who again love the food."
+                    
+                    He says his business is "still growing and expanding and, more importantly, we're still getting busier".
+                    
+                    Daniel Vernon, who works for the wine bar Arthur's of Aughton, says the area is "a bit of a cultural hotspot" and that the Michelin-starred restaurants have a "positive after-effect" for its "discerning" community.
+                    
+                    "You've got people choosing to live here from Liverpool but also residents from way back with cultural ties that are deep."
+                    
+                    Emma and Mark McClean moved to the area five years ago and Mr McClean reckons the place has "a Formby vibe about it", referring to the beach town which has often accommodated Premier League stars, including former Liverpool manager Jurgen Klopp.
+                    
+                    "It's not as big. I think it's a better place to live."
+                    
+                    Mrs McClean adds: "I suppose we're quite lucky - to have three Michelin restaurants on our doorstep." 
+                </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates -
+                        Stay ahead with DNBC. </p>
+                </div>
+
+
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Today in World</a></li>
+                        <li><a href="#" class="text-white ">Business</a></li>
+                        <li><a href="#" class="text-white ">Entertainment</a></li>
+                        <li><a href="#" class="text-white ">Sports</a></li>
+                        <li><a href="#" class="text-white ">Politics</a></li>
+                        <li><a href="#" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Home</a></li>
+                        <li><a href="#" class="text-white ">About</a></li>
+                        <li><a href="#" class="text-white ">Contact</a></li>
+                        <li><a href="#" class="text-white ">Services</a></li>
+                        <li><a href="#" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                </div>
+            </div>
+
+
+            <div
+                class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

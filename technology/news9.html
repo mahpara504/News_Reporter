@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <style>
+    .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar-nav .nav-link{
+            margin-left: auto;
+            color: white;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background-color: white;
+            
+        
+        }
+
+        #dnbc {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color:white;
+            margin-left: 60px; 
+            padding-top: 10px; 
+        }
+        
+
+      
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        #search-bar {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            margin-left: 30px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #120b0a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+   </style>
+</head>
+<body class="bg-secondary-subtle">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+   
+
+        <a href="..//index.html" style="text-decoration: none;"><div class="text-center" id="dnbc">
+            <h3>DNBC</h3>
+        </div></a>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search..." id="search-bar">
+            <button type="submit">Search</button>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cityDropdown" role="button" data-bs-toggle="dropdown">
+                        Select Location
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="..//newyork/page.html">New York</a></li>
+                        <li><a class="dropdown-item" href="..//london/london.html">London</a></li>
+                        <li><a class="dropdown-item" href="..//Los Angeles/city.html">Los Angeles</a></li>
+                        <li><a class="dropdown-item" href="..//paris.html">Paris</a></li>
+                        <li><a class="dropdown-item" href="">Sydney</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+        <div class="p-2 my-2 text-center text-white bg-black">
+            <h3 class="p-2" style="font-size: large;">Nvidia shares sink as Chinese AI app spooks markets</h3>
+            <p class="text-center ">24 January 2025</p>
+        </div>
+    
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12 text-center">
+                <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/da3d/live/808e7750-dd05-11ef-bdbb-4dd18d390726.jpg.webp" class="img-fluid" alt="News Image">
+            </div>
+        </div>
+    
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <pre class="p-3 bg-light text-dark" style="white-space: pre-wrap; word-wrap: break-word;">
+
+                    US tech giant Nvidia lost over a sixth of its value after the surging popularity of a Chinese artificial intelligence (AI) app spooked investors in the US and Europe.
+
+DeepSeek, a Chinese AI chatbot reportedly made at a fraction of the cost of its rivals, launched last week but has already become the most downloaded free app in the US.
+
+AI chip giant Nvidia and other tech firms connected to AI, including Microsoft and Google, saw their values tumble on Monday in the wake of DeepSeek's sudden rise.
+
+In a separate development, DeepSeek said on Monday it will temporarily limit registrations because of "large-scale malicious attacks" on its software.
+
+The DeepSeek chatbot was reportedly developed for a fraction of the cost of its rivals, raising questions about the future of America's AI dominance and the scale of investments US firms are planning.
+
+Last week, OpenAI joined a group of other firms who pledged to invest $500bn (£400bn) in building AI infrastructure in the US.
+
+President Donald Trump, in one of his first announcements since returning to office, called it "the largest AI infrastructure project by far in history" that would help keep "the future of technology" in the US.
+
+DeepSeek is powered by the open source DeepSeek-V3 model, which its researchers claim was trained for around $6m - significantly less than the billions spent by rivals.
+
+But this claim has been disputed by others in AI.
+
+The researchers say they use already existing technology, as well as open source code - software that can be used, modified or distributed by anybody free of charge.
+
+DeepSeek's emergence comes as the US is restricting the sale of the advanced chip technology that powers AI to China.
+
+To continue their work without steady supplies of imported advanced chips, Chinese AI developers have shared their work with each other and experimented with new approaches to the technology.
+
+This has resulted in AI models that require far less computing power than before.
+
+It also means that they cost a lot less than previously thought possible, which has the potential to upend the industry.
+
+After DeepSeek-R1 was launched earlier this month, the company boasted of "performance on par with" one of OpenAI's latest models when used for tasks such as maths, coding and natural language reasoning.
+
+Silicon Valley venture capitalist and Trump adviser Marc Andreessen described DeepSeek-R1 as "AI's Sputnik moment", a reference to the satellite launched by the Soviet Union in 1957.
+
+At the time, the US was considered to have been caught off-guard by their rival's technological achievement.
+
+DeepSeek's sudden popularity has startled stock markets in Europe and the US.
+
+In the US, AI chipmaker Nvidia ended Monday's trading having plunged 16.9% while its rival Broadcom slumped 17.4%.
+
+Other tech firms also sank, with Microsoft down 2.14% and Google's owner Alphabet down over 4%.
+
+In Europe, Dutch chip equipment maker ASML ended Monday's trading with its share price down by more than 7% while shares in Siemens Energy, which makes hardware related to AI, had plunged by a fifth.
+
+"This idea of a low-cost Chinese version hasn't necessarily been forefront, so it's taken the market a little bit by surprise," said Fiona Cincotta, senior market analyst at City Index.
+
+"So, if you suddenly get this low-cost AI model, then that's going to raise concerns over the profits of rivals, particularly given the amount that they've already invested in more expensive AI infrastructure."
+
+Singapore-based technology equity adviser Vey-Sern Ling told the BBC it could "potentially derail the investment case for the entire AI supply chain".
+
+But Wall Street banking giant Citi cautioned that while DeepSeek could challenge the dominant positions of American companies such as OpenAI, issues faced by Chinese firms could hamper their development.
+
+"We estimate that in an inevitably more restrictive environment, US access to more advanced chips is an advantage," analysts said in a report.
+
+Meanwhile, DeepSeek said on Monday it had been the victim of a cyberattack.
+
+"Due to large-scale malicious attacks on DeepSeek's services, we are temporarily limiting registrations to ensure continued service," it said in a statement.
+
+"Existing users can log in as usual. Thanks for your understanding and support."
+
+Who founded DeepSeek?
+The company was founded in 2023 by Liang Wenfeng in Hangzhou, a city in southeastern China.
+
+The 40-year-old, an information and electronic engineering graduate, also founded the hedge fund that backed DeepSeek.
+
+He reportedly built up a store of Nvidia A100 chips, now banned from export to China.
+
+Experts believe this collection - which some estimates put at 50,000 - led him to launch DeepSeek, by pairing these chips with cheaper, lower-end ones that are still available to import.
+
+Mr Liang was recently seen at a meeting between industry experts and the Chinese premier Li Qiang.
+
+In a July 2024 interview with The China Academy, Mr Liang said he was surprised by the reaction to the previous version of his AI model.
+
+"We didn't expect pricing to be such a sensitive issue," he said.
+
+"We were simply following our own pace, calculating costs, and setting prices accordingly."
+
+Additional reporting by Joao Da Silva and Dearbail Jordan. 
+
+
+
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+        
+    <footer class="bg-dark text-white pt-4">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-3 mb-3">
+                    <h2 class="fw-bold border-bottom border-white d-inline-block pb-1">DNBC</h2>
+                    <p class="small">A leading trusted source for Breaking news, Exclusive stories and Global updates - Stay ahead with DNBC. </p>
+                </div>
+                
+              
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">News Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Today in World</a></li>
+                        <li><a href="#" class="text-white ">Business</a></li>
+                        <li><a href="#" class="text-white ">Entertainment</a></li>
+                        <li><a href="#" class="text-white ">Sports</a></li>
+                        <li><a href="#" class="text-white ">Politics</a></li>
+                        <li><a href="#" class="text-white ">Technology</a></li>
+                    </ul>
+                </div>
+                
+          
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">About US</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white ">Home</a></li>
+                        <li><a href="#" class="text-white ">About</a></li>
+                        <li><a href="#" class="text-white ">Contact</a></li>
+                        <li><a href="#" class="text-white ">Services</a></li>
+                        <li><a href="#" class="text-white ">Sign up</a></li>
+                    </ul>
+                </div>
+    
+             
+                <div class="col-md-3 mb-3">
+                    <h5 class="text-uppercase">Contact & FAQs</h5>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                    <p class="small"></p>
+                </div>
+            </div>
+    
+    
+            <div class="border-top border-secondary mt-3 pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+           
+                <p>&copy; 2025 DNBC News Channel. All rights reserved.</p>
+                <div class="icons">
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram"></i></a>
+             
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+</body>
+</html>
